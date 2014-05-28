@@ -40,3 +40,6 @@ set vb t_vb=
 set noeb vb t_vb=
 
 filetype plugin indent on
+
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
