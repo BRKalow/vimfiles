@@ -43,3 +43,6 @@ filetype plugin indent on
 
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
+
+"This unsets the "last search pattern" register by hetting return
+nnoremap <CR> :noh<CR><CR>
