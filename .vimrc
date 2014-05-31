@@ -18,7 +18,7 @@ if has('clipboard') && LINUX()
 endif
 
 " UI
-if &term == 'xterm' || &term == 'screen'
+if !has('gui_running')
   syntax on
   set t_Co=256
   let g:solarized_termcolors=256
@@ -47,6 +47,8 @@ filetype plugin indent on
 
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
+
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 "Map <ESC> to jk
 inoremap jk <ESC>
