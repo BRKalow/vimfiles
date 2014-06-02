@@ -42,6 +42,7 @@ set preserveindent
 set number
 set vb t_vb=
 set noeb vb t_vb=
+set noswapfile
 
 filetype plugin indent on
 
